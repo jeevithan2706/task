@@ -1,0 +1,22 @@
+<mat-toolbar class="mat-elevation-z5">
+    <mat-toolbar-row>
+        <span><b>Go RestApi</b> </span>
+        <span class="example-spacer"></span>
+        <mat-icon class="example-icon" aria-hidden="false" aria-label="Example heart icon">person_outline</mat-icon>
+    </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-sidenav-container >
+    <mat-sidenav mode="side" opened>
+        <mat-nav-list class="nav-list">
+            <a mat-list-item routerLink="userdata" class="list"><mat-icon>person</mat-icon>User List</a>
+            <a mat-list-item routerLink="newuser" class="list"><mat-icon>person_add</mat-icon>Add NewUser</a>
+            <a mat-list-item routerLink="updatedata" class="list"><mat-icon>build</mat-icon>Update User</a>
+            <a mat-list-item routerLink="deletedata" class="list"><mat-icon>delete</mat-icon>Delete User</a>
+        </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+        <p style="height:86vh;"> <router-outlet></router-outlet></p>
+    </mat-sidenav-content>
+</mat-sidenav-container>
